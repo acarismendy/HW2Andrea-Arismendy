@@ -219,14 +219,17 @@
       
     </p>
     <Script type="text/javascript">
-      var dates =[70,80,90,100,110]
-      d3.select("body")
-        .selectAll("td")
-        .data(dates)
-        .enter()
-        .append("p")
-        .text("New");
-      console.log("http://yijisoo.github.io/ie59000/2015spring/hw2/students.json");
+      d3.json("http://yijisoo.github.io/ie59000/2015spring/hw2/students.json",function(data){
+        console.log(data);
+      });
+      //var dates =[70,80,90,100,110]
+      //d3.select("body")
+      //  .selectAll("td")
+      //  .data(dates)
+      //  .enter()
+      //  .append("p")
+      //  .text("New");
+      //console.log("http://yijisoo.github.io/ie59000/2015spring/hw2/students.json");
     </Script>
   </body>
 </html>
