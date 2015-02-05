@@ -223,7 +223,9 @@
       d3.select("body")
       .selectall("td")
       .data(dates)
-      .enter();
+      .enter()
+      .append("p")
+      .text("New");
     </Script>
   </body>
 </html>
