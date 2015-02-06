@@ -3,10 +3,12 @@ table{
   border-collapse:collapse;
   text-align:center;
   margin-top:30px;
+  float:left;
 }
 #picture{
   display: inline;
   margin-top:30px;
+  float:rigth;
 }
 #header{
   background-color:#3e4045;
