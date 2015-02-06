@@ -3,3 +3,9 @@ table{
   border: 1px solid #999999;
   display: inline;
 }
+div>img{
+  display: inline;
+}
+#header{
+  background-color:#3e4045;
+}
