@@ -13,8 +13,12 @@ table{
 }
 .impair{
   background-color:#999999;
+  border-collapse:collapse;
+  text-align:center;
 }
 td{
   border:none;
   margin:auto;
+  border-collapse:collapse;
+  text-align:center;
 }
