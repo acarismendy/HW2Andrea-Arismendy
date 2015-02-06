@@ -1,7 +1,7 @@
 table{
   display: inline;
 }
-div>img{
+#picture{
   display: inline;
   float:left;
 }
