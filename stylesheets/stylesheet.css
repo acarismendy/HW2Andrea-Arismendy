@@ -1,6 +1,4 @@
 table{
-  width:80%;
-  border: 1px solid #999999;
   display: inline;
 }
 div>img{
@@ -11,4 +9,7 @@ div>img{
 }
 .impair{
   background-color:#999999;
+}
+td{
+  border:none;
 }
