@@ -3,6 +3,7 @@ table{
 }
 div>img{
   display: inline;
+  float:left;
 }
 #header{
   background-color:#3e4045;
