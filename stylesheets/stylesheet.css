@@ -1,5 +1,7 @@
 table{
   display: inline;
+  border-collapse:collapse;
+  text-align:center;
 }
 #picture{
   display: inline;
@@ -13,4 +15,5 @@ table{
 }
 td{
   border:none;
+  margin:auto;
 }
