@@ -2,6 +2,7 @@ table{
   display: inline;
   border-collapse:collapse;
   text-align:center;
+  margin-top:30px;
 }
 #picture{
   display: inline;
