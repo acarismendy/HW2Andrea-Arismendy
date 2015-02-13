@@ -16,215 +16,29 @@
     <div id="header">
       <img src="https://www.purdue.edu/purdue/images/logo.png" style="size:70%"/>
     </div>
-      <table style="width: 70%; float:left; display:inline border: 1px solid black">
-      <tr class="impair">
-        <td style="border:none; width:13%;" >
-          1  
-        </td>
-        <td style="border:none; width:13%;">
-          2
-        </td>
-        <td style="border:none; width:13%;">
-          3
-        </td>
-        <td style="border:none; width:13%;">
-          4
-        </td>
-        <td style="border:none; width:13%;">
-          5
-        </td>
-        <td style="border:none; width:13%;">
-          6
-        </td>
-      </tr>
-      <tr>
-        <td style="border:none; width:13%;">
-          7
-        </td>
-        <td style="border:none; width:13%;">
-          8
-        </td>
-        <td style="border:none; width:13%;">
-          9
-        </td>
-        <td style="border:none; width:13%;">
-          10
-        </td>
-        <td style="border:none; width:13%;">
-          11
-      </td>
-        <td style="border:none; width:13%;">
-          12
-        </td>
-      </tr>
-      <tr class="impair">
-        <td style="border:none; width:13%;">
-          13
-        </td>
-        <td style="border:none; width:13%;">
-          14
-        </td>
-        <td style="border:none; width:13%;">
-          15
-        </td>
-        <td style="border:none; width:13%;">
-          16
-        </td>
-        <td style="border:none; width:13%;">
-          17
-        </td>
-        <td style="border:none; width:13%;">
-          18
-        </td>
-      </tr>
-      <tr>
-        <td style="border:none; width:13%;">
-          19
-        </td>
-        <td style="border:none; width:13%;">
-          20
-        </td>
-        <td style="border:none; width:13%;">
-          21
-        </td>
-        <td style="border:none; width:13%;">
-          22
-        </td>
-        <td style="border:none; width:13%;">
-          23
-        </td>
-        <td style="border:none; width:13%;">
-          24
-        </td>
-      </tr>
-      <tr class="impair">
-        <td style="border:none; width:13%;">
-          25
-        </td>
-        <td style="border:none; width:13%;">
-          26
-        </td>
-        <td style="border:none; width:13%;">
-          27
-        </td>
-        <td style="border:none; width:13%;">
-          28
-        </td>
-        <td style="border:none; width:13%;">
-          29
-        </td>
-        <td style="border:none; width:13%;">
-          30
-        </td>
-      </tr>
-      <tr>
-        <td style="border:none; width:13%;">
-          31
-        </td>
-        <td style="border:none; width:13%;">
-          32
-        </td>
-        <td style="border:none; width:13%;">
-          33
-        </td>
-        <td style="border:none; width:13%;">
-          34
-        </td>
-        <td style="border:none; width:13%;">
-          35
-        </td>
-        <td style="border:none; width:13%;">
-          36
-        </td>
-      </tr>
-      <tr class="impair">
-        <td style="border:none; width:13%;">
-          37
-        </td>
-        <td style="border:none; width:13%;">
-          38
-        </td>
-        <td style="border:none; width:13%;">
-          39
-        </td>
-        <td style="border:none; width:13%;">
-          40
-        </td>
-        <td style="border:none; width:13%;">
-          41
-        </td>
-        <td style="border:none; width:13%;">
-          42
-        </td>
-      </tr>
-      <tr>
-        <td style="border:none; width:13%;">
-          43
-        </td>
-        <td style="border:none; width:13%;">
-          44
-        </td>
-        <td style="border:none; width:13%;">
-          45
-        </td>
-        <td style="border:none; width:13%;">
-          46
-        </td>
-        <td style="border:none; width:13%;">
-          47
-        </td>
-        <td style="border:none; width:13%;">
-          48
-        </td>
-      </tr>
-      <tr class="impair">
-        <td style="border:none; width:13%;">
-          49
-        </td>
-        <td style="border:none; width:13%;">
-          50
-        </td>
-        <td style="border:none; width:13%;">
-          51
-        </td>
-        <td style="border:none; width:13%;">
-          52
-        </td>
-        <td style="border:none; width:13%;">
-          53
-        </td>
-        <td style="border:none; width:13%;">
-          54
-        </td>
-      </tr>
-      <tr>
-        <td style="border:none; width:13%;">
-          55
-        </td>
-        <td style="border:none; width:13%;">
-          56
-        </td>
-        <td style="border:none; width:13%;">
-          57
-        </td>
-        <td style="border:none; width:13%;">
-          58
-        </td>
-        <td style="border:none; width:13%;">
-          59
-        </td>
-        <td style="border:none; width:13%;">
-          60
-        </td>
-      </tr>
+    <table style="width: 70%; float:left; display:inline border: 1px solid black">
+      <th>Name</th>
+      <th>GPA</th>
+      <th>GRE_V</th>
+      <th>GRE_Q</th>
+      <th>Essay</th>
+      <th>Recom</th>
     </table>
  
     <img id="picture" src="https://krannertlife.purdue.edu/wp-content/uploads/2013/07/Purdue-Students-life.jpg" style="float:right; display:inline; width:30%"/>
 
     <Script type="text/javascript">
       d3.json("http://yijisoo.github.io/ie59000/2015spring/hw2/students.json",function(data){
-        console.log(data);
-      });
+        for(var i=0, i<data.length, i++){
+          var row=d3.select("tbody").append("tr");
+          row.append("tr").text(data[i].Name);
+          row.append("tr").text(data[i].GPA);
+          row.append("tr")-text(data[i].GRE_V);
+          row.append("tr").text(data[i].GRE_Q);
+          row.append("tr").text(data[i].Essay);
+          row.append("tr").text(data[i].Recom);
+          };
+        });
       //var dates =[70,80,90,100,110]
       //d3.select("body")
       //  .selectAll("td")
