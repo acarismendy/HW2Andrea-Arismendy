@@ -49,7 +49,7 @@
           for(var i=0;i<data.length;i++){
             if(Participants[i][0]===BetterScore){
               Participants[i][0]=0;
-              Participants[i][1];=position;
+              Participants[i][1]=position;
             }
           }
           position++;
@@ -62,7 +62,7 @@
             row.append("td").text(data[i].GRE_Q);
             row.append("td").text(data[i].Essay);
             row.append("td").text(data[i].Recom);
-            row.append("").text(data[i].GPA+data[i].GRE_V+data[i].GRE_Q+data[i].Essay+data[i].Recom);
+            row.append("td").text(data[i].GPA+data[i].GRE_V+data[i].GRE_Q+data[i].Essay+data[i].Recom);
             row.append("td").text(Participants[i][1]);
           }
         });
