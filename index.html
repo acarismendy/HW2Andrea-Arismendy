@@ -33,7 +33,7 @@
       d3.json("https://hivelab.org/static/students.json",function(data){
         for(var i=0; i<data.length; i++){
           var BetterScore =0;
-          var Participants=new Array[][];
+          var Participants=new Array[data.length][2];
           var position=1;
           for(var i=0;i<data.length;i++){
             var total1=data[i].GPA+data[i].GRE_V+data[i].GRE_Q+data[i].Essay+data[i].Recom;
