@@ -41,16 +41,22 @@
           row.append("td").text(data[i].Recom);
           
           var total=data[i].GPA+data[i].GRE_V+data[i].GRE_Q+data[i].Essay+data[i].Recom;
-         // var BetterScore =0;
-          //var Better="";
-          //for(var i=0;i<data.length;i++){
-            // var total1=data[i].GPA+data[i].GRE_V+data[i].GRE_Q+data[i].Essay+data[i].Recom;
-            //if(total1>BetterScore){
-              //BetterScore=total;
-              //Better=data[i].Name
-            //}   
-          //}
-          
+          var BetterScore =0;
+          var Scores=new Array();
+          var Better="";
+          var Ranking=0;
+          for(var i=0;i<data.length;i++){
+            var total1=data[i].GPA+data[i].GRE_V+data[i].GRE_Q+data[i].Essay+data[i].Recom;
+            Scores[i]=total1; 
+          }
+          for(var i=0;i<data.length;i++){
+            if(total>BetterScore){
+              BetterScore=total
+              row.append("td").text(Ranking);
+              
+            }
+          }
+          Ranking++;
           row.append("td").text(total);
           };
         });
