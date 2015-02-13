@@ -29,7 +29,7 @@
 
     <Script type="text/javascript">
       d3.json("http://yijisoo.github.io/ie59000/2015spring/hw2/students.json",function(data){
-        for(var i=0, i<data.length, i++){
+        for(var i=0; i<data.length; i++){
           var row=d3.select("tbody").append("tr");
           row.append("tr").text(data[i].Name);
           row.append("tr").text(data[i].GPA);
