@@ -21,13 +21,13 @@ td{
   border-collapse:collapse;
   text-align:center;
 }
-.text{
+#text{
   display:block;
   margin-top:35px;
   float:left;
   background-color:#3e4045;
   color:white;
 }
-.division{
+#division{
   display:block;
 }
