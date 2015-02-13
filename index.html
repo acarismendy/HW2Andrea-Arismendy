@@ -23,6 +23,8 @@
       <th>GRE_Q</th>
       <th>Essay</th>
       <th>Recom</th>
+      <th>Total</th>
+      <th>Ranking</th>
     </table>
  
     <img id="picture" src="https://krannertlife.purdue.edu/wp-content/uploads/2013/07/Purdue-Students-life.jpg" style="float:right; display:inline; width:30%"/>
@@ -31,12 +33,25 @@
       d3.json("https://hivelab.org/static/students.json",function(data){
         for(var i=0; i<data.length; i++){
           var row=d3.select("tbody").append("tr");
-          row.append("td").text(data[i].Name)
-          row.append("td").text(data[i].GPA)
-          row.append("td").text(data[i].GRE_V)
-          row.append("td").text(data[i].GRE_Q)
-          row.append("td").text(data[i].Essay)
+          row.append("td").text(data[i].Name);
+          row.append("td").text(data[i].GPA);
+          row.append("td").text(data[i].GRE_V);
+          row.append("td").text(data[i].GRE_Q);
+          row.append("td").text(data[i].Essay);
           row.append("td").text(data[i].Recom);
+          
+          var total=data[i].GPA+data[i].GRE_V+data[i].GRE_Q+data[i].Essay+data[i].Recom;
+         // var BetterScore =0;
+          //var Better="";
+          //for(var i=0;i<data.length;i++){
+            // var total1=data[i].GPA+data[i].GRE_V+data[i].GRE_Q+data[i].Essay+data[i].Recom;
+            //if(total1>BetterScore){
+              //BetterScore=total;
+              //Better=data[i].Name
+            //}   
+          //}
+          
+          row.append("td").text(total);
           };
         });
     
