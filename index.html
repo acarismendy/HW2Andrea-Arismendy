@@ -41,23 +41,26 @@
           row.append("td").text(data[i].Recom);
           
           var total=data[i].GPA+data[i].GRE_V+data[i].GRE_Q+data[i].Essay+data[i].Recom;
+          row.append("td").text(total);
+          
           var BetterScore =0;
           var Scores=new Array();
           var Better="";
-          var Ranking=0;
+          var Ranking=new array();
+          var position=0;
           for(var i=0;i<data.length;i++){
             var total1=data[i].GPA+data[i].GRE_V+data[i].GRE_Q+data[i].Essay+data[i].Recom;
             Scores[i]=total1; 
           }
           for(var i=0;i<data.length;i++){
-            if(total>BetterScore){
-              BetterScore=total
-              row.append("td").text(Ranking);
+            if(Scores[i]>BetterScore){
+              BetterScore=Scores[i]
+              Ranking[i]=position
               
             }
           }
-          Ranking++;
-          row.append("td").text(total);
+          position++;
+          
           };
         });
     
