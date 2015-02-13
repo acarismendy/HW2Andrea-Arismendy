@@ -32,36 +32,39 @@
     <Script type="text/javascript">
       d3.json("https://hivelab.org/static/students.json",function(data){
         for(var i=0; i<data.length; i++){
-          var row=d3.select("tbody").append("tr");
-          row.append("td").text(data[i].Name);
-          row.append("td").text(data[i].GPA);
-          row.append("td").text(data[i].GRE_V);
-          row.append("td").text(data[i].GRE_Q);
-          row.append("td").text(data[i].Essay);
-          row.append("td").text(data[i].Recom);
-          
-          var total=data[i].GPA+data[i].GRE_V+data[i].GRE_Q+data[i].Essay+data[i].Recom;
-          row.append("td").text(total);
-          
           var BetterScore =0;
-          var Scores=new Array();
-          var Better="";
-          var Ranking=new array();
-          var position=0;
+          var Participants=new Array[[]];
+          var position=1;
           for(var i=0;i<data.length;i++){
             var total1=data[i].GPA+data[i].GRE_V+data[i].GRE_Q+data[i].Essay+data[i].Recom;
-            Scores[i]=total1; 
+            Participants[i][0]=total1;
+          }
+          }
+          for(var j=0;j<data.length;j++){
+           for(var i=0;i<data.length;i++){
+            if(Participants[i][0]>BetterScore){
+              BetterScore=Participants[i][0];
+            }
           }
           for(var i=0;i<data.length;i++){
-            if(Scores[i]>BetterScore){
-              BetterScore=Scores[i]
-              Ranking[i]=position
-              
+            if(Participants[i][0]===BetterScore){
+              Participants[i][0]=0;
+              Participants[i][1];=position;
             }
           }
           position++;
-          
-          };
+          }
+          for(var i=0;i<data.length;i++){
+            var row=d3.select("tbody").append("tr");
+            row.append("td").text(data[i].Name);
+            row.append("td").text(data[i].GPA);
+            row.append("td").text(data[i].GRE_V);
+            row.append("td").text(data[i].GRE_Q);
+            row.append("td").text(data[i].Essay);
+            row.append("td").text(data[i].Recom);
+            row.append("").text(data[i].GPA+data[i].GRE_V+data[i].GRE_Q+data[i].Essay+data[i].Recom);
+            row.append("td").text(Participants[i][1]);
+          }
         });
     
     </Script>
