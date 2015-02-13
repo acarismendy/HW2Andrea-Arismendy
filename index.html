@@ -28,7 +28,7 @@
     <img id="picture" src="https://krannertlife.purdue.edu/wp-content/uploads/2013/07/Purdue-Students-life.jpg" style="float:right; display:inline; width:30%"/>
 
     <Script type="text/javascript">
-      d3.json("http://yijisoo.github.io/ie59000/2015spring/hw2/students.json",function(data){
+      d3.json("https://hivelab.org/static/students.json",function(data){
         for(var i=0; i<data.length; i++){
           var row=d3.select("tbody").append("tr");
           row.append("tr").text(data[i].Name);
@@ -39,14 +39,7 @@
           row.append("tr").text(data[i].Recom);
           };
         });
-      //var dates =[70,80,90,100,110]
-      //d3.select("body")
-      //  .selectAll("td")
-      //  .data(dates)
-      //  .enter()
-      //  .append("p")
-      //  .text("New");
-      //console.log("http://yijisoo.github.io/ie59000/2015spring/hw2/students.json");
+    
     </Script>
   </body>
 </html>
