@@ -32,11 +32,11 @@
         for(var i=0; i<data.length; i++){
           var row=d3.select("tbody").append("tr");
           row.append("tr").text(data[i].Name);
-          row.append("tr").text(data[i].GPA);
-          row.append("tr").text(data[i].GRE_V);
-          row.append("tr").text(data[i].GRE_Q);
-          row.append("tr").text(data[i].Essay);
-          row.append("tr").text(data[i].Recom);
+          .append("tr").text(data[i].GPA)
+          .append("tr").text(data[i].GRE_V)
+          .append("tr").text(data[i].GRE_Q)
+          .append("tr").text(data[i].Essay)
+          .append("tr").text(data[i].Recom);
           };
         });
     
