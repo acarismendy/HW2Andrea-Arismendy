@@ -22,6 +22,10 @@ td{
   text-align:center;
 }
 .text{
+  display:block;
   margin-top:35px;
   float:left;
+}
+.division{
+  display:block;
 }
